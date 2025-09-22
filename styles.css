@@ -1,10 +1,13 @@
 
+@import url(https://fonts.bunny.net/css?family=averia-libre:400);
+
 .main-container {
     background-color: lightcoral;
     color: whitesmoke;
     display: flex;
     height: clamp(200px, 80vw, 400px);
     margin: 50px;
+    font-family: 'Averia Libre', sans-serif;
 }
 
 .visuals {
@@ -15,6 +18,7 @@
     width: clamp(70px, 30vw, 700px);
     height: clamp(100px, 80vw, 400px);
 }
+
 img {
     width: 100%;
     height: 100%;
@@ -22,6 +26,15 @@ img {
     object-position: center;
 }
 
+.img-source {
+    position: absolute;
+    top: calc(clamp(200px, 80vw, 400px) * .95);
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+
+}
 .banner-text {
     position: absolute;
     top: calc(clamp(200px, 80vw, 400px) / 4);
@@ -54,4 +67,15 @@ button {
     margin-bottom: 10px;
 }
 
+input:invalid:focus {
+    border: 2px solid red;
+    box-shadow: 3px 3px 5px red;
+}
 
+input:valid:focus {
+    border: 2px solid blue;
+}
+
+input {
+    border-radius: 5px;
+}
