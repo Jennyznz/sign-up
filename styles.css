@@ -1,11 +1,36 @@
 
-.container {
-    height: 200px;
-    width: 200px;
+.main-container {
+    background-color: lightcoral;
+    color: whitesmoke;
     display: flex;
+    height: clamp(100px, 50vw, 400px);
+    margin: 50px;
 }
 
+.visuals {
+    position: relative;
+}
+
+.img-container {
+    width: clamp(50px, 30vw, 400px);
+    height: clamp(100px, 50vw, 400px);
+}
 img {
-    height: 200px;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
+
+.banner-text {
+    position: absolute;
+    top: calc(clamp(100px, 50vw, 400px) / 4);
+    z-index: 1;
+    background-color: rgba(240, 128, 128, .5);
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
